@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <title>Responsive Navbar</title>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">Web Dev Creative</a></div>
+                <ul class="links">
+                    <li class="li_nav"><a class="a_nav_title" href="#">Home</a></li>
+                    <li class="li_nav"><a class="a_nav_title" href="#">about</a></li>
+                    <li class="li_nav"><a class="a_nav_title" href="#">service</a></li>
+                    <li class="li_nav"><a class="a_nav_title" href="#">contact</a></li>
+                    <li class="li_nav"><a class="a_nav_title" href="#">style 1</a></li>
+                    <li class="li_nav"><a class="a_nav_title" href="#">style2</a></li>
+                </ul>
+                <a href="#" class="action_btn">Get start</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="dropdown_menu open">
+                    <li class="li_nav"><a class="a_nav_title" href="#">Home</a></li>
+                    <li class="li_nav"><a class="a_nav_title" href="#">about</a></li>
+                    <li class="li_nav"><a class="a_nav_title" href="#">service</a></li>
+                    <li class="li_nav"><a class="a_nav_title" href="#">contact</a></li>
+                    <li class="li_nav"><a class="a_nav_title" href="#">style 1</a></li>
+                    <li class="li_nav"><a class="a_nav_title" href="#">style2</a></li>
+                    <li class="li_nav"><a href="#" class="action_btn">Get start</a></li>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="hero">
+                <h1>Welcome</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </section>
+        </main>
+        <script>
+            const toggleBtn =document.querySelector('.toggle_btn')
+            const toggleBtnIcon =document.querySelector('.toggle_btn i')
+            const dropDownMenu =document.querySelector('.dropdown_menu')
+            toggleBtn.onclick = function() {
+             dropDownMenu.classList.toggle('open')
+             const isOpen = dropDownMenu.classList.contains('open')
+             toggleBtnIcon.classList =  isOpen
+             ? 'fa-solid fa-xmark'
+             : 'fa-solid fa-bars'
+            }
+        </script>
+    </body>
+</html>
